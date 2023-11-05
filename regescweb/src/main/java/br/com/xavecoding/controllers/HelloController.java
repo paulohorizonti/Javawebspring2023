@@ -15,13 +15,9 @@ public class HelloController {
 		public ModelAndView Hello()
 		{
 			ModelAndView mv = new ModelAndView("hello"); //chama a apagina direta
-			
 			mv.addObject("nome", "Luizinho");
-			
 			return mv;
-			
-			
-		
+					
 			
 		}
 		
@@ -43,7 +39,6 @@ public class HelloController {
 		{
 			//setar um parametro para requisição
 			request.setAttribute("nome","Samuka");
-			
 			
 			//quando acessar a /hello no navegador ele vai exibir essa html que no caso esta em templates
 			return "hello";
