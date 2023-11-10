@@ -16,8 +16,9 @@ public class Professor {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(nullable = false)
+	@Column(nullable = true)
 	private String nome;
+	
 	private BigDecimal salario;
 	
 	@Enumerated
@@ -26,6 +27,16 @@ public class Professor {
 	public Professor() {
 		
 	}
+	
+	
+
+	public Professor(String nome, BigDecimal salario, StatusProfessor statusProfessor) {
+		this.nome = nome;
+		this.salario = salario;
+		this.statusProfessor = statusProfessor;
+	}
+
+
 
 	public Long getId() {
 		return id;

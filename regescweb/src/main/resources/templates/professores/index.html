@@ -1,0 +1,94 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Professores - LISTA</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+	<div class="container">
+
+		<div class="row">
+			<div class="col-12 mt-4">
+				<div class="card">
+					<div class="card-header">
+						Listagem de Professores
+					</div>
+					<div class="card-body">
+						<div class="row">
+							<div class="col-12 table-responsive">
+								<table class="table table-hover table-striped">
+									<thead>
+										<tr>
+											<th scope="col">ID</th>
+											<th scope="col">NOME</th>
+											<th scope="col">SALÁRIO</th>
+											<th scope="col">STATUS</th>
+											<th colspan="3" class="text-center" scope="col">AÇÕES</th>
+											
+										</tr>
+									</thead>
+									<tbody>
+										<tr th:each="professor: ${professores}">
+											<th class="w-5" scope="row" th:text="${professor.getId()}"  >1</th>
+											<td class="w-30" th:text="${professor.nome}">NOME</td>
+											<td class="w-25" th:text="${professor.salario}">SALARIO</td>
+											<td class="w-10" th:text="${professor.statusProfessor}">STATUS</td>
+											<td class="w-5"><a href="#"> <i class="bi bi-eye"></i></a></td>
+											<td class="w-5"><a href="#"><i class="bi bi-pencil-square"></i></a></td>
+											<td class="w-5"><a href="#"> <i class="bi bi-trash"></i></a></td>
+										</tr>
+										
+
+									</tbody>
+
+								</table>
+							</div>
+
+						</div>
+						
+					</div>
+
+					<div class="card-footer">
+						<div class="row">
+							<div class="d-flex justify-content-start  col-6">
+								<span>Card footer</span>
+							</div>
+							<div class="col-6 d-flex justify-content-end ">
+								<button type="button" class="btn btn-primary  ml-auto"><i class="bi bi-floppy-fill"></i> NOVO</button>
+							</div>
+							
+						</div>
+						
+						
+						
+						
+						
+						
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+
+
+	</div>
+
+
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
