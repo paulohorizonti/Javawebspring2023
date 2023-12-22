@@ -62,14 +62,30 @@ public class Professor {
 		this.salario = salario;
 	}
 
-	public StatusProfessor getStatusProfessor() {
+
+	
+public StatusProfessor getStatusProfessor() {
 		return statusProfessor;
 	}
+
+
 
 	public void setStatusProfessor(StatusProfessor statusProfessor) {
 		this.statusProfessor = statusProfessor;
 	}
-	
+
+
+
+@Override
+public String toString() {
+	// TODO Auto-generated method stub
+	return "Professor{"+
+			"id="+ id +
+			", nome=' " + nome +'\''+
+			", salario="+salario+
+			", statusProfessor=" + statusProfessor +
+			'}';
+}
 	
 	
 	
